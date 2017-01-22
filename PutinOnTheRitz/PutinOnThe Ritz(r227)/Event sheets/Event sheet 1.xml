@@ -604,5 +604,18 @@
                 <action id="-26" name="Restart layout" sid="901799999817864" type="System" />
             </actions>
         </event-block>
+        <event-block sid="138079264213707">
+            <conditions>
+                <condition id="3" name="On touched object" sid="817447289969585" type="Touch">
+                    <param id="0" name="Object">Twitter_Logo_White_On_Blue</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="299242696567097" type="Browser">
+                    <param id="0" name="URL">&quot;https://twitter.com/intent/tweet?source=webclient&amp;text=testing twitter integration&quot;&amp; &quot;500&quot; &amp;&quot;%23PutinOnTheRitz&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

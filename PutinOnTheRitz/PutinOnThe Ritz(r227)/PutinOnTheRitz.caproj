@@ -8,15 +8,17 @@
     <author-website></author-website>
     <app-id></app-id>
     <unique-id>mq4njje893h0</unique-id>
-    <saved-with-version>23300</saved-with-version>
+    <saved-with-version>23900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Twitter" version="1">Twitter</plugin>
         <plugin author="Scirra" id="admob" version="1">Admob Ads</plugin>
     </used-plugins>
     <used-behaviors>
@@ -379,6 +381,20 @@
         <object-type name="AJAX" sid="795145258118198">
             <plugin id="AJAX" />
         </object-type>
+        <object-type name="Twitter" sid="622287553466591">
+            <plugin id="Twitter" />
+        </object-type>
+        <object-type name="Browser" sid="648162277072702">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="Twitter_Logo_White_On_Blue" sid="437491440276549">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="932071645277417" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dylan\Downloads\Twitter_Logo_White_On_Blue\Twitter_Logo_White_On_Blue\Twitter_Logo_White_On_Blue.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -416,6 +432,7 @@
             </properties>
         </global-instance>
         <global-instance type="AJAX" uid="20" />
+        <global-instance type="Browser" uid="21" />
     </global-instances>
     <sounds-folder />
     <music-folder />
