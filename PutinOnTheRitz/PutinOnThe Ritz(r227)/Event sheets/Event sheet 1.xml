@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable comment="0 = Mobile, 1 =Desktop" constant="1" name="CONTROLMODE" sid="303587011024579" static="0" type="number">1</variable>
         <comment>Game, Scoring and Difficulty</comment>
         <variable comment="Score, corrected to start platform on layout start" constant="0" name="Score" sid="9039390533624602" static="0" type="number">0</variable>
         <variable comment="0 for in menu, 1 for in game" constant="0" name="GameMode" sid="2587663242636129" static="0" type="number">0</variable>
@@ -49,10 +50,6 @@
                     <param id="0" name="Pin to">Player</param>
                     <param id="1" name="Mode">1</param>
                 </action>
-                <action id="5" name="Set web font" sid="455121129297500" type="DistanceDisplay">
-                    <param id="0" name="Family name">&quot;top_secretbold&quot;</param>
-                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
-                </action>
                 <action id="0" name="Play" sid="457955777874426" type="Audio">
                     <param id="0" name="Audio file">Putin_on_the_Ritz</param>
                     <param id="2" name="Loop">1</param>
@@ -68,6 +65,11 @@
                 </condition>
                 <condition id="-14" name="Compare variable" sid="187156127135814" type="System">
                     <param id="0" name="Variable">GameMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="972951761899523" type="System">
+                    <param id="0" name="Variable">CONTROLMODE</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -96,6 +98,58 @@
                 <action behavior="Fade" id="1" name="Start fade" sid="310540209722289" type="UpArrow" />
                 <action behavior="Fade" id="1" name="Start fade" sid="731897702241540" type="RightArrow" />
                 <action behavior="Fade" id="1" name="Start fade" sid="123099208336510" type="LeftArrow" />
+                <action id="5" name="Set web font" sid="725784052085126" type="DistanceDisplay">
+                    <param id="0" name="Family name">&quot;top_secretbold&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="5" name="Set web font" sid="690048172287470" type="Text">
+                    <param id="0" name="Family name">&quot;top_secretbold&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="136190024074334">
+            <conditions>
+                <condition id="3" name="On touched object" sid="516618059225415" type="Touch">
+                    <param id="0" name="Object">Start</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="486890787903487" type="System">
+                    <param id="0" name="Variable">GameMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="991361445179700" type="System">
+                    <param id="0" name="Variable">CONTROLMODE</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="837222560192089" type="UpArrow" />
+                <action id="-9" name="Destroy" sid="943563223381940" type="LeftArrow" />
+                <action id="-9" name="Destroy" sid="198548258632321" type="RightArrow" />
+                <action id="-9" name="Set value" sid="101549373548327" type="System">
+                    <param id="0" name="Variable">GameMode</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="849473614208985" type="System">
+                    <param id="0" name="Variable">NextBlock</param>
+                    <param id="1" name="Value">Grass.Width + Player.Width + random(250)</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="123347502156390" type="Start" />
+                <action behavior="Fade" id="1" name="Start fade" sid="414506003661757" type="ritztitle" />
+                <action behavior="Fade" id="1" name="Start fade" sid="296747286655911" type="putin" />
+                <action id="-15" name="Set visible" sid="913511183418246" type="Text">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="5" name="Set web font" sid="316221773131817" type="DistanceDisplay">
+                    <param id="0" name="Family name">&quot;top_secretbold&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="5" name="Set web font" sid="735720607005092" type="Text">
+                    <param id="0" name="Family name">&quot;top_secretbold&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
             </actions>
         </event-block>
         <comment>While on floor, keep holding the &quot;run right&quot; control, so the character keeps running.</comment>
@@ -366,9 +420,6 @@
                             <param id="0" name="Speed">0</param>
                         </action>
                         <action behavior="Sine" id="0" name="Set active" sid="597338016962574" type="RitzRotator">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Platform" disabled="1" id="11" name="Set enabled" sid="157196881791369" type="Player">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>

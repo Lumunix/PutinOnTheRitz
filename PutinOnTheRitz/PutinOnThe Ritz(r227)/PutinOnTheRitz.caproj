@@ -44,6 +44,7 @@
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Hide address bar">No</prop>
@@ -111,9 +112,6 @@
             <behaviors>
                 <behavior-type name="Pin" sid="6973460380771118">
                     <behavior id="Pin" />
-                </behavior-type>
-                <behavior-type name="Physics" sid="7229486169320448">
-                    <behavior id="Physics" />
                 </behavior-type>
             </behaviors>
             <container>
@@ -378,6 +376,14 @@
         </object-type>
         <object-type name="Audio" sid="692652949689618">
             <plugin id="Audio" />
+        </object-type>
+        <object-type name="Text" sid="987583653749979">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="642357241032593">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
         </object-type>
     </object-folder>
     <families />
