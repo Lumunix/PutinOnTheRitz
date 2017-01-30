@@ -24,6 +24,7 @@
                     <param id="0" name="Variable">NextBlock</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="2" name="Stop" sid="539094343830911" type="Speaker" />
                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="238527340581388" type="Grass">
                     <param id="0" name="Angle">180</param>
                 </action>
@@ -663,6 +664,54 @@
             <actions>
                 <action id="-21" name="Reset global variables" sid="932327422110663" type="System" />
                 <action id="-26" name="Restart layout" sid="901799999817864" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="239285332610218">
+            <conditions>
+                <condition id="3" name="On touched object" sid="117255658422285" type="Touch">
+                    <param id="0" name="Object">Speaker</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="784162443129767" type="Speaker">
+                    <param id="0" name="Instance variable">Mute</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="973819639761177" type="Audio" />
+                <action id="5" name="Set frame" sid="780250065939134" type="Speaker">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="561267503990085" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="433375412136273" type="Speaker">
+                    <param id="0" name="Instance variable">Mute</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="629945155150453">
+            <conditions>
+                <condition id="3" name="On touched object" sid="892651978202754" type="Touch">
+                    <param id="0" name="Object">Speaker</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="729266779611142" type="Speaker">
+                    <param id="0" name="Instance variable">Mute</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="209822588510488" type="Audio">
+                    <param id="0" name="Audio file">Putin_on_the_Ritz</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="393689893691479" type="Speaker">
+                    <param id="0" name="Instance variable">Mute</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="5" name="Set frame" sid="620518125617852" type="Speaker">
+                    <param id="0" name="Frame number">0</param>
+                </action>
             </actions>
         </event-block>
     </events>
