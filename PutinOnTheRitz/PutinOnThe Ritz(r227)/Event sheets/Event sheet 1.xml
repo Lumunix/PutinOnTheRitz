@@ -20,6 +20,9 @@
                 <condition id="-2" name="On start of layout" sid="290809604551829" type="System" />
             </conditions>
             <actions>
+                <action id="4" name="Preload" sid="529968328527394" type="Audio">
+                    <param id="0" name="Audio file">Putin_on_the_Ritz</param>
+                </action>
                 <action id="-9" name="Set value" sid="9388782557018806" type="System">
                     <param id="0" name="Variable">NextBlock</param>
                     <param id="1" name="Value">0</param>
@@ -55,7 +58,7 @@
                     <param id="0" name="Audio file">Putin_on_the_Ritz</param>
                     <param id="2" name="Loop">1</param>
                     <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                    <param id="1" name="Tag (optional)">&quot;putin&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -676,7 +679,10 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="33" name="Stop all" sid="973819639761177" type="Audio" />
+                <action id="2" name="Set muted" sid="973819639761177" type="Audio">
+                    <param id="0" name="Tag">&quot;putin&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
                 <action id="5" name="Set frame" sid="780250065939134" type="Speaker">
                     <param id="0" name="Frame number">1</param>
                 </action>
@@ -699,11 +705,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Play" sid="209822588510488" type="Audio">
-                    <param id="0" name="Audio file">Putin_on_the_Ritz</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                <action id="2" name="Set muted" sid="596760794308002" type="Audio">
+                    <param id="0" name="Tag">&quot;putin&quot;</param>
+                    <param id="1" name="State">1</param>
                 </action>
                 <action id="-13" name="Set boolean" sid="393689893691479" type="Speaker">
                     <param id="0" name="Instance variable">Mute</param>
