@@ -397,6 +397,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Credit" sid="249532386273321">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

@@ -60,6 +60,13 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;putin&quot;</param>
                 </action>
+                <action id="5" name="Set web font" sid="149204822209466" type="Credit">
+                    <param id="0" name="Family name">&quot;top_secretbold&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="671571386469657" type="Credit">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="7429314495331417">
