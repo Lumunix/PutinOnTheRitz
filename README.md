@@ -12,4 +12,5 @@ Feel free to share this around, remix it, add to it.
 ![Gameplay Screenshot](https://github.com/Lumunix/PutinOnTheRitz/blob/master/docs/screenshot.PNG)
 
 You can play the game in browser on Github Pages at the link below:
-![Play Here]https://lumunix.github.io/PutinOnTheRitz/
+
+![Play Here](https://lumunix.github.io/PutinOnTheRitz/)
