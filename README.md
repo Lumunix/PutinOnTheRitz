@@ -5,9 +5,6 @@ Feel free to share this around, remix it, add to it.
 [Putin On The Ritz Meme](https://github.com/Lumunix/PutinOnTheRitz/blob/master/docs/ritzgif.gif)
 
 ![Title Screen](https://github.com/Lumunix/PutinOnTheRitz/blob/master/docs/titlescreen.PNG)
-
-![Gameplay Screenshot](https://github.com/Lumunix/PutinOnTheRitz/blob/master/docs/screenshot.png)
-
 You can play the game in browser on Github Pages at the link below:
 
 [Play Here](https://lumunix.github.io/PutinOnTheRitz/)
